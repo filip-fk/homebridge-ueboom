@@ -16,7 +16,7 @@ function UEBoomSpeaker(log, config) {
   this.time = 1000;
   this.speaker = config.speaker;
   this.host = config.host;
-  this._service = new Service.Speaker(this.name); //ji
+  this._service = new Service.Speaker(this.name);
 
   this.cacheDirectory = HomebridgeAPI.user.persistPath();
   this.storage = require('node-persist');
