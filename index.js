@@ -25,7 +25,7 @@ function UEBoomSpeaker(log, config) {
     forgiveParseErrors: true
   });
 
-  this._service.getCharacteristic(Characteristic.Active).Active('set', this._setActive.bind(this));
+  this._service.getCharacteristic(Characteristic.On).On('set', this._setActive.bind(this));
   this._service.getCharacteristic(Characteristic.Mute).Mute('set', this._setMute.bind(this));
   this._service.getCharacteristic(Characteristic.Mute).Mute('get', this._getMute.bind(this));
 
