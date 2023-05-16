@@ -25,9 +25,9 @@ function UEBoomSpeaker(log, config) {
     forgiveParseErrors: true
   });
 
-  this._service.getCharacteristic(Characteristic.On).On('set', this._setActive.bind(this));
-  this._service.getCharacteristic(Characteristic.Mute).Mute('set', this._setMute.bind(this));
-  this._service.getCharacteristic(Characteristic.Mute).Mute('get', this._getMute.bind(this));
+  this._service.getCharacteristic(Characteristic.On).on('set', this._setActive.bind(this));
+  this._service.getCharacteristic(Characteristic.Mute).on('set', this._setMute.bind(this));
+  this._service.getCharacteristic(Characteristic.Mute).on('get', this._getMute.bind(this));
 
   var cachedState = this.storage.getItemSync(this.name);
   if ((cachedState === undefined) || (cachedState === false)) {
